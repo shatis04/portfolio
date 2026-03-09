@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-400 via-indigo-400 to-purple-400;
+    background-size: 200% auto;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200 dark:bg-white/5 dark:border-white/10;
+  }
+
+  .glass-light {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-200;
+  }
+}
